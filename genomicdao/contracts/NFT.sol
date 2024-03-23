@@ -13,7 +13,7 @@ contract GeneNFT is ERC721, ERC721Burnable, Ownable {
 
     constructor() ERC721("GeneNFT", "GNFT") {}
 
-    function safeMint(address to) public onlyOwner returns(uint256) {
+    function safeMint(address to) public onlyOwner returns (uint256) {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
